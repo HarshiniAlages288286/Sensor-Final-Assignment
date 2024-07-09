@@ -1,0 +1,10 @@
+CREATE DATABASE `sensor_db`;
+CREATE TABLE `dht22` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `temperature` int(11) NOT NULL,
+  `humidity` int(11) NOT NULL,
+  `datetime` datetime NOT NULL DEFAULT current_timestamp(),
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `ldr_value` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
